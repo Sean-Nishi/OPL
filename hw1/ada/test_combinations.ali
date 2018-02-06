@@ -1,0 +1,64 @@
+V "GNAT Lib v6"
+M P W=b
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U test_combinations%b	test_combinations.adb	328e4f46 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20151118101227 4be8ce1b interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D system.ads		20151123113124 6326c08a system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-imgint.ads		20090409150019 02dbe0c2 system.img_int%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D test_combinations.adb	20180206210648 0ae3ba92 test_combinations%b
+X 1 ada.ads
+16K9*Ada 19e8 23|1r6 1r24
+X 6 a-textio.ads
+49K13*Text_IO 471e16 23|1w10 1r28
+166U14*New_Line 23|50s16
+242U14*Put 23|37s13
+X 23 test_combinations.adb
+3U11*Test_Combinations 3b11 56l5 56t22
+5I12 Integers 7r56 16r19 24r24 24r38 24r52 37r18
+6k12 Combinations 5z12 11l8 11e20 13b17 40l8 40t20 43r25
+7A12*Combination(5I12)<integer> 8r35 9r34 10r26 14r35 21r34 34r26 46r8[43]
+8U17*First 8=24 14b17 20l11 20t16 48s4[43]
+8a24 X{7A12} 14b24 16m10 17r22 18m13 18r22
+9U17*Next 9=23 21b17 33l11 33t15 51s7[43]
+9a23 X{7A12} 21b23 23r27 24r16 24r69 25m16 25r25 26r32 27m19 27r28
+10U17*Put 10>22 34b17 39l11 39t14 50s7[43]
+10a22 X{7A12} 34b22 36r19 37r34
+17i14 I{integer} 18r16 18r25
+23i14 I{integer} 24r19 24r78 25r19 25r28 26r25
+26i20 J{integer} 27r22 27r31
+36i14 I{integer} 37r37
+42I9 Five<short_short_integer> 43r39
+43K12 Fives[6] 44r8
+46a4 X{7A12[43]} 48m11 48r11 50r12 51m13 51r13
+

@@ -1,33 +1,19 @@
 #Python attempt at hw
 #input: 2 ints, k and n
-#output: print the combination of k and n
+#output: prints the k combinations from 1 to n
 
 #included libraries
 import sys
 import array
 
 #------------------------------------------
-#this (should be) recursive function
-#input: k, n
-#output:
-def combo(k, n, i):
-    #end of recursion check
-    if(i == n):
-        print(int(i), '\n')
-    else:
-        while(i < n):
-            print(int(i), end = '')
-            i = i+1
-            combo(k, n, i)
-
-#-------------------
-
 def combinations(arr, n, k):
-    #create temp array of length k to hold values to be printed
+    #create temp array of length k to hold values to be printed. Initialized to 0
     temp = [0] * int(k+1)
 
     #start and end markers
     #don't want off-by-one error
+	#These variables are unneccessary but help clarify
     start = 0
     end = n-1
     index = 0
@@ -38,12 +24,12 @@ def combinations(arr, n, k):
 
 #input: array, storage array, start of array, end of array, index in array, array length
 #output: prints completed functions
-def hard_work(arr, temp, start, end, index, arr_len):
+def hard_work(arr, temp, start, end, index, k):
     #if we finished a combination, print it
     #aka. if the index is at the end of the temp array
     if(index == k):
         i = 0
-	#print each value in the temp array
+	    #print each value in the temp array
         while(i < k):
             print(temp[i], end = '')
             i = i+1
@@ -51,15 +37,16 @@ def hard_work(arr, temp, start, end, index, arr_len):
         return
 
     x = start
-    while(x <= end and (end-x >= k-index)):
+    while(x <= end and (end-x+1 >= k-index)):
+		#assign value to the array
         temp[index] = arr[x]
-	#for recursion we need increment the start of the array
-	#also need to increment the index 
-        hard_work(arr, temp, start+1, end, index+1, k)
+	    #for recursion we need increment the start of the array
+	    #also need to increment the index
+        hard_work(arr, temp, x+1, end, index+1, k)
         x = x+1
 
 #-----------------------------------------
-#combination function
+#combination function taking n and assuming k = 2
 #input: k, n
 #output: 
 def comb(k, n):
@@ -78,7 +65,6 @@ def comb(k, n):
         i = i+1
         j = i+1
         
-
 #-----------------------------------------
 
 #main()
@@ -96,21 +82,17 @@ if int(sys.argv[1]) > int(sys.argv[2]):
 k = int(sys.argv[1])
 n = int(sys.argv[2])
 
-i = 0
-
 #create an array and initialize all values from 1 to n
+i = 1
 arr = []
-while (i != n):
-    arr.append(i)
+while (i <= n):
+    arr.append(int(i))
     i = i+1
-
-#get length of arr
-#arr_len = len(arr)
 
 #call fcn
 combinations(arr, n, k)
 
-#combo(k, n, i)
+#test function
 #comb(k, n)
-#print(output)
+
 
