@@ -9,7 +9,7 @@ import array
 #------------------------------------------
 def combinations(arr, n, k):
     #create temp array of length k to hold values to be printed. Initialized to 0
-    temp = [0] * int(k+1)
+    temp = [0] * int(k)
 
     #start and end markers
     #don't want off-by-one error
@@ -36,6 +36,7 @@ def hard_work(arr, temp, start, end, index, k):
         print('\n')
         return
 
+	#should be using an iterator in a for loop here. However, I am more comfortable with a while loop
     x = start
     while(x <= end and (end-x+1 >= k-index)):
 		#assign value to the array
@@ -46,6 +47,7 @@ def hard_work(arr, temp, start, end, index, k):
         x = x+1
 
 #-----------------------------------------
+#THIS IS NEVER CALLED! THIS IS A TEST FUNCTION
 #combination function taking n and assuming k = 2
 #input: k, n
 #output: 
