@@ -1,0 +1,20 @@
+//This is the header that contains the nodes
+
+class Node {
+ public:
+  Node* parent;
+  Node* left_child;
+  Node* right_child;
+
+  //constructor
+  void Node ();
+  //destructor
+  ~Node ();
+  
+};
+
+void Node::Node () {
+  parent = NULL;
+  left_child = NULL;
+  right_child = NULL;
+}
